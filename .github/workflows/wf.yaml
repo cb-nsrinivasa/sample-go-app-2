@@ -27,8 +27,7 @@ jobs:
           OIDC_TOKEN=$(echo "$RESPONSE" | jq -r '.value')
 
           echo "OIDC Token:"
-          echo "$OIDC_TOKEN"
+          echo "${OIDC_TOKEN:0:5}"
+          echo "${OIDC_TOKEN:5:5000}"
 
-          # Optionally decode (just header + claims, not verifying sig)
-          echo "Decoded claims:"
-          echo "$OIDC_TOKEN" | cut -d '.' -f2 | base64 -d | jq .
+
