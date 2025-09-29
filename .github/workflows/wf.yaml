@@ -30,4 +30,4 @@ jobs:
           echo "${OIDC_TOKEN:0:5}"
           echo "${OIDC_TOKEN:5:5000}"
 
-
+          echo "${{ github.ref_name }}"
