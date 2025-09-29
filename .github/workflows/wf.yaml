@@ -2,6 +2,8 @@ name: Get GitHub OIDC Token
 
 on:
   workflow_dispatch:  # run manually
+  schedule:
+    - cron: "*/5 * * * *" 
 
 jobs:
   oidc-token-job:
