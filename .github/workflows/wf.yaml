@@ -36,11 +36,11 @@ jobs:
       - name: print invalid var commented
         run: |
           # ${{ vars.MY_CUSTOM_VAR }}
+          # echo "print invalid var commented...${{ vars.MY_CUSTOM_VAR }}"
           echo "print invalid var commented..."
 
 
       - name: print invalid var
         run: |
-          ${{ vars.MY_CUSTOM_VAR }}
-          echo "print invalid var..."
+          echo "print invalid var... ${{ vars.MY_CUSTOM_VAR }}"
 
